@@ -1,0 +1,73 @@
+#ifndef __MCSR_H__
+#define __MCSR_H__
+
+#define MTIMECMP (0x4000+0x02000000)     //address of mtimecmp 0x4000-0x4008
+#define MTIME    (0xbff8+0x02000000)     //address of mtime 0xbff8-0xc000
+#define DISP     (0x0000+0x03000000)
+
+#define MSTATUS_UIE 0x1
+#define MSTATUS_SIE 0x2
+#define MSTATUS_HIE 0x4
+#define MSTATUS_MIE 0x8
+#define MSTATUS_UPIE 0x10
+#define MSTATUS_SPIE 0x20
+#define MSTATUS_HPIE 0x40
+#define MSTATUS_MPIE 0x80
+#define MSTATUS_SPP 0x100
+#define MSTATUS_HPP (0x400|0x200)
+#define MSTATUS_MPP (0x1000|0x800)
+#define MSTATUS_FS (0x4000|0x2000)
+#define MSTATES_XS (0x10000|0x8000)
+#define MSTATUS_SD 0x80000000
+
+#define MIE_USIE 0x1
+#define MIE_SSIE 0x2
+#define MIE_HSIE 0x4
+#define MIE_MSIE 0x8
+#define MIE_UTIE 0x10
+#define MIE_STIE 0x20
+#define MIE_HTIE 0x40
+#define MIE_MTIE 0x80
+#define MIE_UEIE 0x100
+#define MIE_SEIE 0x200
+#define MIE_HEIE 0x400
+#define MIE_MEIE 0x800 
+
+#define MIP_USIP MIE_USIE 
+#define MIP_SSIP MIE_SSIE 
+#define MIP_HSIP MIE_HSIE 
+#define MIP_MSIP MIE_MSIE 
+#define MIP_UTIP MIE_UTIE 
+#define MIP_STIP MIE_STIE 
+#define MIP_HTIP MIE_HTIE 
+#define MIP_MTIP MIE_MTIE 
+#define MIP_UEIP MIE_UEIE 
+#define MIP_SEIP MIE_SEIE 
+#define MIP_HEIP MIE_HEIE 
+#define MIP_MEIP MIE_MEIE
+
+#define SSTATUS_UIE MSTATUS_UIE
+#define SSTATUS_SIE MSTATUS_SIE
+#define SSTATUS_UPIE MSTATUS_UPIE
+#define SSTATUS_SPIE MSTATUS_SPIE
+#define SSTATUS_SPP MSTATUS_SPP
+#define SSTATUS_FS MSTATUS_FS
+#define SSTATES_XS MSTATES_XS
+#define SSTATUS_SD MSTATUS_SD
+
+#define SIE_USIE MIE_USIE 
+#define SIE_SSIE MIE_SSIE 
+#define SIE_UTIE MIE_UTIE 
+#define SIE_STIE MIE_STIE  
+#define SIE_UEIE MIE_UEIE 
+#define SIE_SEIE MIE_SEIE 
+
+#define SIP_USIP MIP_USIP 
+#define SIP_SSIP MIP_SSIP 
+#define SIP_UTIP MIP_UTIP 
+#define SIP_STIP MIP_STIP  
+#define SIP_UEIP MIP_UEIP 
+#define SIP_SEIP MIP_SEIP 
+
+#define PAY_LOAD_ADDRESS 0x80200000
+#endif

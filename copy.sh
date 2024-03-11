@@ -1,0 +1,1 @@
+cp ./build/*.hex /mnt/d/txt/system2
